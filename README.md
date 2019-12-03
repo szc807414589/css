@@ -80,3 +80,10 @@
 * span与span之间有看不见的空白
 
         设置父元素 font-size: 0; 或者父元素设置 display:flex/inline-flex;，
+
+* 如何改变选中文本的文字颜色和背景色
+
+        ::selection {
+        background-color: #000;
+        color: white;
+        }
