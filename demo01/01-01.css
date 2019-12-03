@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+}
+.container{
+    width: 300px;
+    height: 600px;
+    margin: 300px;
+    border: 1px solid #000;
+}
+.d1{
+    background-color: #eeeeee;
+    /*margin-left: -100px;!/*不设置宽度的时候增加宽度 *!*/
+    /*margin-top:-100px;*/
+    /*margin-right: -100px; !*不设置宽度的时候增加宽度 *!*/
+    /*margin-bottom: -100px;*/
+    margin-right: 100px;
+}
+.d2{
+    background-color: #f00;
+    width: 300px;
+    /*margin-left: -100px;//设置宽度的时候向左移动对应距离*/
+    /*margin-top:-100px;*/
+    margin-right: -100px;
+    /*margin-top: -100px;*/
+    float: left;
+    display: inline-block;
+}
+/*
+负margin会改变浮动元素的显示位置,
+即使我的元素写在DOM的后面，
+我也能让它显示在最前面。
+圣杯布局、双飞翼布局啊什么的，都是利用这个原理实现的。
+*/
+.d3{
+    background-color: #0ff;
+    display: inline-block;
+    /*float: left;*/
+    /*margin-left: -50px;*/
+}
+.d4{
+    background-color: #ff0;
+    /*float: left;*/
+    width: 50px;
+    /*margin-left: -100px;*/
+}
+.triangle:after{
+    content: '';
+    border: 35px solid transparent;
+    border-bottom-color: lightgreen;
+}
