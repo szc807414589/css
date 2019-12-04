@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+
+.container{
+    width: 200px;
+    height: 100px;
+    margin: 200px auto;
+    /*border: 10px solid red;*/
+}
+.container >div{
+    background-color: #ff0;
+    display: inline-block;
+    width: 10px;
+    height: 100px;
+    animation: move 3s ease-in-out infinite;
+}
+ .container >.d2{
+    animation-delay: .1s;
+}
+ .container >.d3{
+    animation-delay: .2s;
+}
+ .container >.d4{
+    animation-delay: .3s;
+}
+ .container >.d5{
+    animation-delay: .4s;
+}
+@keyframes move {
+    0%,100%{
+        transform: scaleY(1);
+    }
+    16.7%{
+        transform: scaleY(3);
+    }
+    33.33%{
+        transform: scaleY(1);
+    }
+    50%{
+        transform: scaleY(3);
+    }
+    66.7%{
+        transform: scaleY(1);
+    }
+    83.33%{
+        transform: scaleY(3);
+    }
+}

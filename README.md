@@ -84,6 +84,6 @@
 * 如何改变选中文本的文字颜色和背景色
 
         ::selection {
-        background-color: #000;
-        color: white;
+            background-color: #000;
+            color: white;
         }
