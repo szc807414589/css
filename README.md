@@ -87,3 +87,25 @@
             background-color: #000;
             color: white;
         }
+
+* less mixin 省略号封装
+
+        /**
+        * 溢出省略号
+        * @param {Number} 行数
+        */
+        .mixinEllipsis(@rowCount) {
+            & when (@rowCount = 1) {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            & when (@rowCount > 1) {
+                min-width: 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: @rowCount;
+                -webkit-box-orient: vertical;
+            }
+        }
