@@ -109,3 +109,21 @@
                 -webkit-box-orient: vertical;
             }
         }
+
+* 说说z-index有什么需要注意的地方
+
+        background/border ==> z-index<0 ==> block ==> float ==> inline/inline-block ==> z-index:auto ==> z-index:0 ==> z-index > 0
+
+* position
+    
+        static，默认值。位置设置为static的元素，它始终会处于文档流给予的位置。
+        inherit，规定应该从父元素继承 position 属性的值。
+            但是任何的版本的 Internet Explorer （包括 IE8）都不支持属性值 “inherit”。
+        fixed，生成绝对定位的元素。
+            默认情况下，可定位于相对于浏览器窗口的指定坐标。元素的位置通过 “left”, “top”, “right” 以及 “bottom” 属性进行规定。
+            不论窗口滚动与否，元素都会留在那个位置。但当祖先元素具有transform属性且不为none时，就会相对于祖先元素指定坐标，
+            而不是浏览器窗口。
+        absolute，生成绝对定位的元素，相对于距该元素最近的已定位的祖先元素进行定位。
+            此元素的位置可通过 “left”、”top”、”right” 以及 “bottom” 属性来规定。
+        relative，生成相对定位的元素，相对于该元素在文档中的初始位置进行定位。
+            通过 “left”、”top”、”right” 以及 “bottom” 属性来设置此元素相对于自身位置的偏移。
